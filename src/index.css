@@ -1,0 +1,7 @@
+@import "tailwindcss";
+*{
+  font-family: 'Inter', sans-serif;
+}
+header{
+  transition: all 0.5s;
+}
