@@ -27,7 +27,7 @@ export function Home() {
         <h2 className="font-bold text-2xl my-10">Explora mi portafolio</h2>
         <div className="flex flex-col gap-y-4 md:grid md:grid-cols-12 md:gap-x-2">
           {homeData.map((e) => (
-            <Link to={e.path} key={e.id} className="flex flex-col gap-y-2 gap-2 p-2 rounded-lg border-solid border-gray-200 border-1 hover:shadow-md bg-white md:col-span-6 lg:col-span-3">
+            <Link to={e.path} key={e.id} className="flex flex-col gap-y-2 gap-2 p-2 rounded-lg border-solid border-gray-200 border-1 hover:shadow-md transition delay-150 duration-150 hover:-translate-y-1 bg-white md:col-span-6 lg:col-span-3">
               <span className="material-symbols-outlined text-[#2563eb]">{e.icon}</span>
               <h3 className="">{e.title}</h3>
               <p>{e.info}</p>

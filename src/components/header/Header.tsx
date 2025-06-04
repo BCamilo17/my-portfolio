@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 // import {Link} from "react-router-dom";
+
+// array of links for the header navigation
+// array de objetos con las propiedades name, href e id
 const navLinks = [
     { name: "Inicio", href: "/", id: 1 },
     { name: "Sobre Mí", href: "/about", id: 2 },
@@ -24,7 +27,7 @@ export const Header = () => {
     }, [location.pathname]);
 
     return (
-        <header className={`${showNavbarMobile ? "absolute h-[100vh]" : "sticky top-0"} header w-full py-4 px-4 md:px-8 lg:px-12 xl:px-80 flex justify-between flex-wrap items-center ${scrollControl ? "shadow-sm bg-white/80 backdrop-blur-md" : "bg-white"}`}>
+        <header className={`sticky top-0 header w-full py-4 px-4 md:px-8 lg:px-12 xl:px-80 flex justify-between flex-wrap items-center ${scrollControl ? "shadow-sm bg-white/80 backdrop-blur-md" : "bg-white"}`}>
             {/* <div className="flex justify-between flex-wrap items-center"> */}
                 <div className="flex justify-between items-center w-full md:w-fit">
                     <Link to={"/"} className="text-2xl font-bold text-center">Mi portafolio</Link>
