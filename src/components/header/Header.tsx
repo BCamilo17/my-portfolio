@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTheme } from "../../contexts/themeContext";
+
 // import {Link} from "react-router-dom";
 
 // array of links for the header navigation
@@ -12,6 +14,8 @@ const navLinks = [
     { name: "Contacto", href: "/contact", id: 5 },
 ];
 export const Header = () => {
+    const { theme, setTheme } = useTheme();
+
     const location = useLocation();
     const [scrollControl, setScrollControl] = useState(false);
     const [showNavbarMobile, setShowNavbarMobile] = useState(false);
@@ -27,7 +31,7 @@ export const Header = () => {
     }, [location.pathname]);
 
     return (
-        <header className={`sticky top-0 header w-full py-4 px-4 md:px-8 lg:px-12 xl:px-80 flex justify-between flex-wrap items-center ${scrollControl ? "shadow-sm bg-white/80 backdrop-blur-md" : "bg-white"}`}>
+        <header className={`sticky top-0 header w-full py-4 px-4 md:px-8 lg:px-12 xl:px-80 flex justify-between flex-wrap items-center ${scrollControl ? "shadow-sm  backdrop-blur-3xl" : ""}`}>
             {/* <div className="flex justify-between flex-wrap items-center"> */}
                 <div className="flex justify-between items-center w-full md:w-fit">
                     <Link to={"/"} className="text-2xl font-bold text-center">Mi portafolio</Link>
@@ -45,6 +49,13 @@ export const Header = () => {
                                     <Link to={e.href} onClick={() => { setShowNavbarMobile(false) }} className={`text-md text-base hover:text-blue-600 whitespace-nowrap `}>{e.name}</Link>
                                 </li>))
                         }
+                        <li className="flex items-center">
+                            <button onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="text-md text-base hover:text-blue-600 whitespace-nowrap">
+                                <span className="material-symbols-outlined">
+                                    {theme === "light" ? "dark_mode" : "light_mode"}
+                                </span>
+                            </button>
+                        </li>
                     </ul>
                 </nav>
 

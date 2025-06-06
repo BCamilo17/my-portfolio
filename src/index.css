@@ -5,3 +5,30 @@
 header{
   transition: all 0.5s;
 }
+
+/* control para cuando se cambia el tema */
+[data-theme='dark'] {
+  background-color: #111827; /* bg-gray-900 */
+  color: white;
+
+  .backgroud-control{
+    @apply bg-[#1f2937];
+  }
+  .card-background-control{
+    @apply bg-[#111827];
+  }
+}
+[data-theme='light'] {
+  background-color: white;
+  color: black;
+  header{
+    @apply bg-white/80 ;
+  }
+  .backgroud-control{
+    @apply bg-[#f8fafc];
+  }
+    .card-background-control{
+    @apply bg-white;
+  }
+} 
+
