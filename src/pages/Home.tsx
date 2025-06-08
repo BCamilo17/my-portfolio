@@ -4,7 +4,7 @@ import { homeData } from "./../data/index"
 
 export function Home() {
   return (
-    <div className="flex flex-col gap-y-4">
+    <div className="flex flex-col gap-y-4 mt-12">
       <section className="flex flex-col gap-y-2 md:flex-row px-4 md:px-8 lg:px-12 xl:px-80">
         <div className="flex flex-col gap-y-8">
           <div>
@@ -18,9 +18,9 @@ export function Home() {
           </div>
         </div>
         <div className="w-full flex justify-center">
-          <div className=" bg-gray-600 rounded-full w-48 h-48 border-solid border-2 border-blue-400">
 
-          </div>
+          <img className="rounded-full w-80 h-80 border-solid border-2 border-blue-400 object-cover" src="https://raw.githubusercontent.com/BCamilo17/portfolio-content/refs/heads/main/imagen-portfolio.webp" alt="" />
+
         </div>
       </section>
       <section className="w-full flex flex-col justify-center backgroud-control py-6 px-4 md:px-8 lg:px-12 xl:px-80">

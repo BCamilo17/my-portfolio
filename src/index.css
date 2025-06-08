@@ -17,6 +17,9 @@ header{
   .card-background-control{
     @apply bg-[#111827];
   }
+  .technology-container{
+    @apply bg-violet-400 ;
+  }
 }
 [data-theme='light'] {
   background-color: white;
@@ -31,4 +34,4 @@ header{
     @apply bg-white;
   }
 } 
-
+/*Fin control de cambio de tema*/

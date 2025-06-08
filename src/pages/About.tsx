@@ -9,10 +9,12 @@ export function About() {
         <section className="flex gap-y-4 flex-col ">
           <h1 className="text-4xl font-bold flex justify-center">Sobre mí</h1>
           <div className="flex flex-col gap-4 md:flex-row">
-            <div className="flex-1 bg-gray-600 h-[200px] rounded-lg">
-              aaaaaaaaaa
-              <br />
-              aaaaaaaaaa
+            <div className="flex-1 h-fit">
+              <img
+                src="https://raw.githubusercontent.com/BCamilo17/portfolio-content/refs/heads/main/imagen-portfolio.webp"
+                alt="Brayan Camilo Annear Cuta"
+                className="w-full object-cover rounded-lg"
+              />
             </div>
             <div className="flex-1">
               <h2>Brayan Camilo Annear Cuta</h2>
