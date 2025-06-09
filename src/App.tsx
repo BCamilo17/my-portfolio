@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div>
-      <Router basename='/my-portfolio'>
+      <Router>
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
