@@ -14,10 +14,6 @@ export function Contact() {
               <input type="text" name="name" className="border border-gray-300 rounded-lg p-2 mt-1" placeholder="Tu nombre" required />
             </label>
             <label className="flex flex-col">
-              Correo electrónico:
-              <input type="email" name="email" className="border border-gray-300 rounded-lg p-2 mt-1" placeholder="Tu número de teléfono" required />
-            </label>
-            <label className="flex flex-col">
               Mensaje:
               <textarea name="message" rows={5} className="border border-gray-300 rounded-lg p-2 mt-1" placeholder="Tu mensaje" required></textarea>
             </label>
