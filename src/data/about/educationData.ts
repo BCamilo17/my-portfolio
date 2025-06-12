@@ -7,7 +7,7 @@ export const educationData: EducationType[] = [
         institution: "Fundación Universitaria Compensar",
         startDate: "2022",
         endDate: "2024",
-        url: "/public/educationFiles/GradoProfesional.pdf"
+        url: "/educationFiles/GradoProfesional.pdf"
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ export const educationData: EducationType[] = [
         institution: "Fundación Universitaria Compensar",
         startDate: "2021",
         endDate: "2022",
-        url: "/public/educationFiles/GradoTecnologo.pdf"
+        url: "/educationFiles/GradoTecnologo.pdf"
     },
     {
         id: 3,
@@ -23,7 +23,7 @@ export const educationData: EducationType[] = [
         institution: "Fundación Universitaria Compensar",
         startDate: "2019",
         endDate: "2021",
-        url: "/public/educationFiles/GradoTecnico.pdf"
+        url: "/educationFiles/GradoTecnico.pdf"
     },
     {
         id: 4,
@@ -31,6 +31,6 @@ export const educationData: EducationType[] = [
         institution: "Santander",
         startDate: "2024",
         endDate: "2024",
-        url: "/public/educationFiles/CursoPython.pdf"
+        url: "/educationFiles/CursoPython.pdf"
     }
 ]
