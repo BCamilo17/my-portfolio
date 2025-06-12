@@ -39,7 +39,6 @@ export function About() {
 
   ]
   const [activeModal, setActiveModal] = useState(false);
-  const [modalUrl, setModalUrl] = useState("");
   const [modalContent, setModalContent] = useState({title: "", url: ""});
 
   const handleEducationAction = (url: string, title:string) => {
@@ -57,7 +56,7 @@ export function About() {
       document.body.style.overflow = "auto";
     }
   },[activeModal]);
-  console.log(modalContent, "modalContent");
+  console.log(modalContent, "modalContent commit hecho");
   return (
     <>
       <div className="px-4 md:px-8 lg:px-12 xl:px-80 mt-12 flex flex-col gap-y-8">
