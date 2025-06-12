@@ -43,9 +43,8 @@ export function About() {
   const [modalContent, setModalContent] = useState({title: "", url: ""});
 
   const handleEducationAction = (url: string, title:string) => {
-    setModalUrl(url);
     setActiveModal(true);
-    setModalContent({title, url});
+    setModalContent({title:title, url:url});
   }
   useEffect(() => {
     if (activeModal) {
