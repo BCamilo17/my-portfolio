@@ -56,7 +56,7 @@ export function About() {
       document.body.style.overflow = "auto";
     }
   },[activeModal]);
-  console.log(modalContent, "modalContent commit hecho");
+  
   return (
     <>
       <div className="px-4 md:px-8 lg:px-12 xl:px-80 mt-12 flex flex-col gap-y-8">
@@ -106,7 +106,6 @@ export function About() {
         </section>
         <section className="flex justify-center items-center flex-col gap-4">
           <h2 className="text-2xl font-bold">Educación</h2>
-
           <div className="w-full flex flex-col md:flex-row md:grid md:grid-cols-12 md:gap-x-4">
             {educationData.map((e, i) => (
               <div key={i} className="border-solid border-gray-200 border-1 p-4 rounded-lg mb-4 flex flex-col gap-y-2 md:col-span-6 hover:shadow-md transition delay-150 duration-150 hover:-translate-y-1 cursor-pointer" onClick={() => { handleEducationAction(e.url, e.title) }}>
