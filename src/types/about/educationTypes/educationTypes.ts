@@ -4,4 +4,5 @@ export interface EducationType {
     institution: string;
     startDate: string;
     endDate: string;
+    url:string;
 }
