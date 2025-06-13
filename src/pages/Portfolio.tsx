@@ -5,13 +5,13 @@ export function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: "Proyecto E-commerce",
+      title: "Creaciones y decoraciones Annie",
       description:
-        "Una plataforma de comercio electrónico completa con carrito de compras, pagos y panel de administración.",
+        "Una página web, que permite a los usuarios explorar el catálogo de productos de Annie, estos productos incluyen decoraciones, regalos personalizados y más.",
       image: "https://raw.githubusercontent.com/BCamilo17/portfolio-content/refs/heads/main/imagen-portfolio.webp",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      demoUrl: "#",
-      repoUrl: "#",
+      tags: ["Angular(v17)", "TypeScript", "GitHub", "tailwindcss", "Html", "Css"],
+      demoUrl: "",
+      repoUrl: "https://github.com/BCamilo17/proyecto-arreglos.git",
     },
     {
       id: 2,

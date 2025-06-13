@@ -35,12 +35,20 @@ export const Header = () => {
             {/* <div className="flex justify-between flex-wrap items-center"> */}
             <div className="flex justify-between items-center w-full md:w-fit">
                 <Link to={"/"} className="text-2xl font-bold text-center">Mi portafolio</Link>
-                <button onClick={() => setShowNavbarMobile(!showNavbarMobile)} className="md:hidden">
-                    <span className="material-symbols-outlined">
-                        {showNavbarMobile ? "close" : "menu"}
-                    </span>
-                </button>
+                <div className="flex gap-2 md:hidden ">
+                    <button onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="text-md text-base hover:text-blue-600 whitespace-nowrap">
+                        <span className="material-symbols-outlined">
+                            {theme === "light" ? "dark_mode" : "light_mode"}
+                        </span>
+                    </button>
+                    <button onClick={() => setShowNavbarMobile(!showNavbarMobile)} >
+                        <span className="material-symbols-outlined">
+                            {showNavbarMobile ? "close" : "menu"}
+                        </span>
+                    </button>
+                </div>
             </div>
+
             <nav className={`${showNavbarMobile ? "flex w-full" : "hidden md:block"}`}>
                 <ul className=" justify-center space-x-4 flex flex-col md:flex-row w-full">
                     {
@@ -52,7 +60,7 @@ export const Header = () => {
                             </Link>
                         ))
                     }
-                    <li className="flex items-center">
+                    <li className="hidden md:flex items-center">
                         <button onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="text-md text-base hover:text-blue-600 whitespace-nowrap">
                             <span className="material-symbols-outlined">
                                 {theme === "light" ? "dark_mode" : "light_mode"}
@@ -60,6 +68,7 @@ export const Header = () => {
                         </button>
                     </li>
                 </ul>
+
             </nav>
 
             {/* </div> */}

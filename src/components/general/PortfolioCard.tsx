@@ -35,7 +35,7 @@ export const PortfolioCard = ({ image, title, description, tecnologies, url, git
                 </p>
                 <div className="flex gap-2">
                     <button className="p-1 	bg-blue-600 hover:bg-blue-700 text-white rounded-lg cursor-pointer "><a href={url}>Ver</a></button>
-                    <button className="p-1 bg-gray-800 hover:bg-gray-900 text-white rounded-lg cursor-pointer"><a href={githubUrl}>GitHub</a></button>
+                    <button className="p-1 bg-gray-800 hover:bg-gray-900 text-white rounded-lg cursor-pointer"><a href={githubUrl} target="_blank">GitHub</a></button>
                 </div>
 
             </div>
