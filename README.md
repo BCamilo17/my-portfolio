@@ -52,3 +52,18 @@ export default tseslint.config({
   },
 })
 ```
+//convención para los commit
+Tipo	Propósito
+feat	Nueva funcionalidad
+fix	Corrección de errores
+docs	Solo cambios en la documentación
+style	Cambios de formato, sin afectar código
+refactor	Refactorización (sin cambio funcional)
+test	Agregar o mejorar pruebas
+chore	Tareas de mantenimiento (build, deps, etc)
+perf	Mejoras de rendimiento
+//example
+feat(about-me): agrega sección con resumen profesional
+fix(navbar): corrige error de scroll en mobile
+docs: añade diploma profesional al Readme
+chore: actualiza dependencias de React
