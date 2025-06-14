@@ -38,25 +38,27 @@ export function Home() {
       </section>
       <section className="w-full flex flex-col justify-center py-6 px-4 md:px-8 lg:px-12 xl:px-80 gap-2">
         <h2 className="font-bold text-2xl">Sobre este portafolio</h2>
-        <div className="p-4 rounded-lg border-solid border-gray-200 border-1 hover:shadow-md transition delay-150 duration-150 hover:-translate-y-1 card-background-control">
-          <div className="flex flex-col gap-2">
-            <h3 className="font-semibold">Construido con tecnologías modernas</h3>
-            <p className="text-gray-500">Este portafolio fue desarrollado con el fin de dar a conocer mis habilidades y mi versatilidad con diferentes herramientas en el flujo de un proyecto profesional teniendo en cuenta factores como buenas prácticas, funcionalidad y experiencia de usuario.</p>
-            <p className="text-gray-500">Este proyecto es open source y es público en GitHub.</p>
-          </div>
-          <button className="p-1 bg-gray-800 hover:bg-gray-900 text-white rounded-lg cursor-pointer w-full"><a href="https://github.com/BCamilo17/my-portfolio.git">Repositorio</a></button>
-          <div className="flex- gap-2">
-            <h3>Stack tecnológico</h3>
-            <div>
-              <ul>
-                <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full" /> React v19</li>
-                <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />TypeScript</li>
-                <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />Tailwind CSS 4</li>
-                <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />Vite</li>
-                <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />React Router DOM</li>
-                <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />GitHub</li>
-                <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />Vercel</li>
-              </ul>
+        <div className="p-4 rounded-lg border-solid border-gray-200 border-1 hover:shadow-md transition delay-150 duration-150 hover:-translate-y-1 card-background-control flex flex-col gap-2 ">
+          <div className="flex flex-col gap-2 border-b-1 border-gray-300 md:grid md:grid-cols-12 md:gap-x-6  pb-4">
+            <div className="flex flex-col gap-2 md:col-span-6">
+              <h3 className="font-semibold">Construido con tecnologías modernas</h3>
+              <p className="text-gray-500">Este portafolio fue desarrollado con el fin de dar a conocer mis habilidades y mi versatilidad con diferentes herramientas en el flujo de un proyecto profesional teniendo en cuenta factores como buenas prácticas, funcionalidad y experiencia de usuario.</p>
+              <p className="text-gray-500">Este proyecto es open source y es público en GitHub.</p>
+              <a className="p-1 bg-gray-800 hover:bg-gray-900 text-white rounded-lg cursor-pointer w-full flex justify-center" href="https://github.com/BCamilo17/my-portfolio.git" target="_blank">Repositorio</a>
+            </div>
+            <div className="flex- gap-2 col-span-6">
+              <h3 className="font-semibold">Stack tecnológico</h3>
+              <div>
+                <ul>
+                  <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full" /> React v19</li>
+                  <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />TypeScript</li>
+                  <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />Tailwind CSS 4</li>
+                  <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />Vite</li>
+                  <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />React Router DOM</li>
+                  <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />GitHub</li>
+                  <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />Vercel</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div>
