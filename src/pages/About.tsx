@@ -50,7 +50,7 @@ export function About() {
           <div className="flex flex-col gap-4 md:flex-row">
             <div className="flex-1 h-fit">
               <img
-                src="https://raw.githubusercontent.com/BCamilo17/portfolio-content/refs/heads/main/imagen-portfolio.webp"
+                src="https://raw.githubusercontent.com/BCamilo17/portfolio-content/refs/heads/main/images/imagen-perfil.webp"
                 alt="Brayan Camilo Annear Cuta"
                 className="w-full object-cover rounded-lg"
               />

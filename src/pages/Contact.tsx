@@ -1,5 +1,15 @@
-export function Contact() {
+import React, { useState } from "react";
 
+export function Contact() {
+  const [text, setText] = useState<string>("");
+  const [company, setCompany] = useState<string>("");
+  const sendMessageWhatsapp = (e: React.FormEvent) => {
+    e.defaultPrevented;
+    const phone = "573127489367";
+    const customMessage = `${text} \natt: ${company}`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(customMessage)} `;
+    window.open(url, '_blank');
+  }
 
   return (
 
@@ -8,14 +18,14 @@ export function Contact() {
       <p className="text-lg text-center mt-4">¿Tines una oferta de trabajo? actualmente me encuentro en búsqueda activa de empleo, no dudes en contactarme</p>
       <section className="flex flex-col gap-4 ">
         <div className="p-4 flex flex-col gap-2 w-full rounded-lg border-solid border-gray-200 border-1 hover:shadow-md transition delay-150 duration-150 hover:-translate-y-1 card-background-control  ">
-          <form className="flex flex-col gap-y-4">
+          <form onSubmit={sendMessageWhatsapp} className="flex flex-col gap-y-4">
             <label className="flex flex-col">
               Nombre:
-              <input type="text" name="name" className="border border-gray-300 rounded-lg p-2 mt-1" placeholder="Tu nombre" required />
+              <input type="text" name="name" className="border border-gray-300 rounded-lg p-2 mt-1" placeholder="Tu nombre" required onChange={e => setCompany(e.target.value)} />
             </label>
             <label className="flex flex-col">
               Mensaje:
-              <textarea name="message" rows={5} className="border border-gray-300 rounded-lg p-2 mt-1" placeholder="Tu mensaje" required></textarea>
+              <textarea name="message" rows={5} className="border border-gray-300 rounded-lg p-2 mt-1" placeholder="Tu mensaje" required onChange={e => setText(e.target.value)}></textarea>
             </label>
             <button type="submit" className="bg-blue-600 text-white rounded-lg p-2 hover:bg-blue-700 transition duration-200 cursor-pointer">Enviar</button>
           </form>

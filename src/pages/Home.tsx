@@ -19,7 +19,7 @@ export function Home() {
         </div>
         <div className="w-full flex justify-center">
 
-          <img className="rounded-full w-80 h-80 border-solid border-2 border-blue-400 object-cover" src="https://raw.githubusercontent.com/BCamilo17/portfolio-content/refs/heads/main/imagen-portfolio.webp" alt="" />
+          <img className="rounded-full w-80 h-80 border-solid border-2 border-blue-400 object-cover" src="https://raw.githubusercontent.com/BCamilo17/portfolio-content/refs/heads/main/images/imagen-perfil.webp" alt="" />
 
         </div>
       </section>

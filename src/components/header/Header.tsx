@@ -36,8 +36,8 @@ export const Header = () => {
             <div className="flex justify-between items-center w-full md:w-fit">
                 <Link to={"/"} className="text-2xl font-bold text-center">Mi portafolio</Link>
                 <div className="flex gap-2 md:hidden ">
-                    <button onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="text-md text-base hover:text-blue-600 whitespace-nowrap">
-                        <span className="material-symbols-outlined">
+                    <button onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="text-md text-base hover:text-blue-600 whitespace-nowrap text-[16px]">
+                        <span className="material-symbols-outlined text-[16px]">
                             {theme === "light" ? "dark_mode" : "light_mode"}
                         </span>
                     </button>
@@ -62,7 +62,7 @@ export const Header = () => {
                     }
                     <li className="hidden md:flex items-center">
                         <button onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="text-md text-base hover:text-blue-600 whitespace-nowrap">
-                            <span className="material-symbols-outlined">
+                            <span className="material-symbols-outlined text-[16px]">
                                 {theme === "light" ? "dark_mode" : "light_mode"}
                             </span>
                         </button>
