@@ -5,7 +5,7 @@ export function Contact() {
   const [company, setCompany] = useState<string>("");
   const sendMessageWhatsapp = (e: React.FormEvent) => {
     e.defaultPrevented;
-    const phone = "573127489367";
+    const phone = "573222751118";
     const customMessage = `${text} \natt: ${company}`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(customMessage)} `;
     window.open(url, '_blank');
