@@ -1,4 +1,4 @@
-import { GeneralModal } from "../components/general/Modal";
+import { GeneralModal, GeneralCard } from "../components/index";
 import { useEffect, useState } from "react";
 import { skillsData, educationData, professionalData } from "./../data/index"
 import { scrollFunction } from "../utils";
@@ -8,6 +8,7 @@ export function About() {
   // State to manage the modal visibility and content
   const [activeModal, setActiveModal] = useState(false);
   const [modalContent, setModalContent] = useState({ title: "", url: "" });
+  const [openIds, setOpenIds] = useState<number[]>([]);
 
   const handleEducationAction = (url: string, title: string) => {
     setActiveModal(true);
@@ -24,7 +25,14 @@ export function About() {
       document.body.style.overflow = "auto";
     }
   }, [activeModal]);
-
+  console.log(openIds, "skillActive");
+  const toggleId = (id: number) => {
+    setOpenIds((prev) =>
+      prev.includes(id)
+        ? prev.filter((itemId) => itemId !== id) // cerrar
+        : [...prev, id] // abrir
+    );
+  };
   return (
     <>
       <div className="px-4 md:px-8 lg:px-12 xl:px-80 mt-12 flex flex-col gap-y-8">
@@ -56,12 +64,26 @@ export function About() {
               />
             </div>
             <div className="flex-1 flex flex-col gap-y-4">
-              <button className="md:hidden animate-bounce"> <span className="material-symbols-outlined" onClick={()=>{scrollFunction("education-information")}}>keyboard_arrow_down</span></button>
+              <button className="md:hidden animate-bounce"> <span className="material-symbols-outlined" onClick={() => { scrollFunction("education-information") }}>keyboard_arrow_down</span></button>
               {professionalData.map((e) => (
-                <div key={e.id}>
-                  <h2 className="font-semibold">{e.question}</h2>
-                  <p>{e.answer}</p>
-                </div>
+                <GeneralCard key={e.id}>
+                  <div className="flex justify-between items-center">
+                    <h2 className="font-bold text-2xl">{e.question}</h2>
+                    <button
+                      className="cursor-pointer"
+                      onClick={() => toggleId(e.id)}
+                    >
+                      <span
+                        className={`material-symbols-outlined transition duration-150 ${openIds.includes(e.id) ? "rotate-180" : ""
+                          }`}
+                      >
+                        keyboard_arrow_down
+                      </span>
+                    </button>
+                  </div>
+
+                  {openIds.includes(e.id) && <p>{e.answer}</p>}
+                </GeneralCard>
               ))}
             </div>
           </div>
