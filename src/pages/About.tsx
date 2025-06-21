@@ -25,7 +25,7 @@ export function About() {
       document.body.style.overflow = "auto";
     }
   }, [activeModal]);
-  console.log(openIds, "skillActive");
+  // console.log(openIds, "skillActive");
   const toggleId = (id: number) => {
     setOpenIds((prev) =>
       prev.includes(id)
