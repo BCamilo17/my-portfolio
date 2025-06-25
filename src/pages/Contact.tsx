@@ -39,7 +39,7 @@ export function Contact() {
                   <span className="material-symbols-outlined text-blue-600">email</span>
                   <div className="flex flex-col">
                     <p>Email</p>
-                    <p className="text-gray-500"> annear 2000gmail.com</p>
+                    <p className="text-gray-500"> annear@2000gmail.com</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-2">
