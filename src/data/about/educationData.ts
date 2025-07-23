@@ -32,5 +32,13 @@ export const educationData: EducationType[] = [
         startDate: "2024",
         endDate: "2024",
         url: "/educationFiles/CursoPython.pdf"
+    },
+    {
+        id: 5,
+        title: "Curso metodologías ágiles",
+        institution: "Colsubsidio",
+        startDate: "2025",
+        endDate: "2025",
+        url: "/educationFiles/CursoAgileMethodologies.pdf"
     }
 ]
