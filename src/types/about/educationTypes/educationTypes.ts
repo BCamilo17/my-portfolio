@@ -1,8 +1,9 @@
 export interface EducationType {
-    id: number;
-    title: string;
-    institution: string;
-    startDate: string;
-    endDate: string;
-    url:string;
+  id: number;
+  title: string;
+  institution: string;
+  startDate: string;
+  endDate: string;
+  url: string;
+  type: string;
 }

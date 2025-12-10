@@ -13,6 +13,7 @@ export function About() {
     setActiveModal(true);
     setModalContent({ title: title, url: url });
   };
+  const [tabsControl, setTabsControl] = useState("professional");
   useEffect(() => {
     if (activeModal) {
       document.body.style.overflow = "hidden";
@@ -123,22 +124,48 @@ export function About() {
           className="flex justify-center items-center flex-col gap-4"
         >
           <h2 className="text-2xl font-bold">Educación</h2>
+          <div className="flex gap-2 w-full border-solid border-b-1 border-gray-300 mb-4">
+            <button
+              className={`${
+                tabsControl === "professional" &&
+                "border-1 border-b-0 rounded-tr-lg rounded-tl-lg border-solid border-gray-300 bg-[#2669FC]/10 "
+              } cursor-pointer p-2`}
+              onClick={() => {
+                setTabsControl("professional");
+              }}
+            >
+              Profesional
+            </button>
+            <button
+              className={`${
+                tabsControl === "course" &&
+                "border-1 border-b-0 rounded-tr-lg rounded-tl-lg border-solid border-gray-300 bg-[#2669FC]/10"
+              }  cursor-pointer p-2`}
+              onClick={() => {
+                setTabsControl("course");
+              }}
+            >
+              Cursos
+            </button>
+          </div>
           <div className="w-full flex flex-col md:flex-row md:grid md:grid-cols-12 md:gap-x-4">
-            {educationData.map((e, i) => (
-              <a
-                key={i}
-                className="border-solid border-gray-200 border-1 p-4 rounded-lg mb-4 flex flex-col gap-y-2 md:col-span-6 hover:shadow-md transition delay-150 duration-150 hover:-translate-y-1 cursor-pointer"
-                onClick={() => {
-                  handleEducationAction(e.url, e.title);
-                }}
-              >
-                <h3 className="font-semibold">{e.title}</h3>
-                <p>{e.institution}</p>
-                <p>
-                  {e.startDate} - {e.endDate}
-                </p>
-              </a>
-            ))}
+            {educationData
+              .filter((e) => e.type === tabsControl)
+              .map((e, i) => (
+                <a
+                  key={i}
+                  className="border-solid border-gray-200 border-1 p-4 rounded-lg mb-4 flex flex-col gap-y-2 md:col-span-6 hover:shadow-md transition delay-150 duration-150 hover:-translate-y-1 cursor-pointer"
+                  onClick={() => {
+                    handleEducationAction(e.url, e.title);
+                  }}
+                >
+                  <h3 className="font-semibold">{e.title}</h3>
+                  <p>{e.institution}</p>
+                  <p>
+                    {e.startDate} - {e.endDate}
+                  </p>
+                </a>
+              ))}
           </div>
         </section>
       </div>
