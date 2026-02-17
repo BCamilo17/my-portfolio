@@ -12,9 +12,10 @@
   "homepage": "https://BCamilo17.github.io/my-portfolio",
   "dependencies": {
     "@tailwindcss/vite": "^4.0.15",
+    "@testing-library/react": "^16.3.2",
     "gh-pages": "^6.3.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "react-router-dom": "^7.3.0"
   },
   "devDependencies": {
